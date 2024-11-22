@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo44bx8x16iqo"]
+
+[ext_resource type="Script" path="res://scripts/level_1_script.gd" id="1_er66a"]
+
+[node name="Level1" type="Node2D" groups=["Level"]]
+script = ExtResource("1_er66a")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 427.0
+offset_top = 237.0
+offset_right = 560.0
+offset_bottom = 333.0
+text = "Next Level"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

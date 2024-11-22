@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5n50mwnhsfln"
-path="res://.godot/imported/FotoFrido.jpg-f8bfb274de01951ca44288b5566d5912.ctex"
+path="res://.godot/imported/FotoFrido.jpg-ae03466f1b90cddcffc76e931ca47735.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FotoFrido.jpg"
-dest_files=["res://.godot/imported/FotoFrido.jpg-f8bfb274de01951ca44288b5566d5912.ctex"]
+source_file="res://assets/FotoFrido.jpg"
+dest_files=["res://.godot/imported/FotoFrido.jpg-ae03466f1b90cddcffc76e931ca47735.ctex"]
 
 [params]
 
