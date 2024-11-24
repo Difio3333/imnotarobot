@@ -1,27 +1,16 @@
-extends CharacterBody2D
+extends Sprite2D
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-const SPEED = 300.0
-@export var jump_velocity:float = 403.0
-@onready var anim_player: AnimationPlayer = $Sprite2D/AnimationPlayer
-
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	anim_player.play("walk")
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-	
-	if is_on_floor() and anim_player.current_animation == "jump":
-		anim_player.play("walk")
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = -jump_velocity
-		anim_player.play("jump")
-	
-	move_and_slide()
+	pass # Replace with function body.
 
 
-func _on_hit_box_area_entered(area: Area2D) -> void:
-	print("Something hit me")
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	Messenger.emit_signal("ANIMATION_FINISHED",anim_name)
