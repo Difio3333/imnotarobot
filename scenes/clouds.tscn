@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciyd8hxq0x2me"]
+
+[ext_resource type="Texture2D" uid="uid://ckafeq1jf6ehn" path="res://assets/graphic_sidescroller_clouds_00.png" id="1_vdj2o"]
+
+[node name="Clouds" type="Sprite2D"]
+texture = ExtResource("1_vdj2o")

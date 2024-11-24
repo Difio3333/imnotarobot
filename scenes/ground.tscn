@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://nvt0tvjsen32"]
+
+[ext_resource type="Texture2D" uid="uid://bdmgryxohi242" path="res://assets/graphic_sidescroller_ground_00.png" id="1_hw32l"]
+
+[node name="Ground" type="Sprite2D"]
+texture = ExtResource("1_hw32l")
