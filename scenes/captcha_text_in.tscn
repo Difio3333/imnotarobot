@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dloiy8gta264g"]
 
-[ext_resource type="Script" path="res://scenes/captcha_text_in.gd" id="1_4v3sa"]
+[ext_resource type="Script" path="res://scripts/captcha_text_in.gd" id="1_4v3sa"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ft6a"]
 

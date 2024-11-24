@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cm0t23wc6k7bp"]
+
+[node name="Sidescroller" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(15.96, 8.92)
