@@ -48,6 +48,7 @@ func load_current_level():
 
 func next_level():
 	current_level_index += 1
-
+	load_current_level()
 func last_level():
 	current_level_index -= 1
+	load_current_level()
