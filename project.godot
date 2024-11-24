@@ -27,6 +27,10 @@ window/size/resizable=false
 mouse_cursor/custom_image="res://assets/cursor_hand_00_idle.png"
 mouse_cursor/custom_image_hotspot=Vector2(5, 2)
 
+[global_group]
+
+Drone=""
+
 [gui]
 
 theme/custom_font="res://assets/CWEBL.TTF"

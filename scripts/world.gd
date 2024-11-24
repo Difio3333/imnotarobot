@@ -43,6 +43,7 @@ func load_current_level():
 			child.queue_free()
 		elif child.is_in_group("Ground"):
 			child.queue_free()
+			
 	var current_level = loaded_levels[current_level_index].instantiate()
 	call_deferred("add_child",current_level)
 

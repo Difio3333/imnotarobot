@@ -21,8 +21,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
-
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	print(area)
 	if area.is_in_group("Drone"):
