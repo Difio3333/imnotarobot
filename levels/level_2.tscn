@@ -1,12 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5idxyjn2jq01"]
+[gd_scene load_steps=2 format=3 uid="uid://b5idxyjn2jq01"]
 
-[ext_resource type="Script" path="res://scripts/level_1_script.gd" id="1_8cdyd"]
 [ext_resource type="Texture2D" uid="uid://c5n50mwnhsfln" path="res://assets/FotoFrido.jpg" id="2_aqr84"]
 
-[node name="Level2" type="Node2D"]
-script = ExtResource("1_8cdyd")
+[node name="Level2" type="Node2D" groups=["Level"]]
 
-[node name="FotoFrido" type="Sprite2D" parent="." groups=["Level"]]
+[node name="FotoFrido" type="Sprite2D" parent="."]
 position = Vector2(538, 308)
 scale = Vector2(0.6525, 0.66875)
 texture = ExtResource("2_aqr84")
