@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://cm0t23wc6k7bp"]
+[gd_scene load_steps=3 format=3 uid="uid://cm0t23wc6k7bp"]
+
+[ext_resource type="PackedScene" uid="uid://ddfcjdq2ntim6" path="res://scenes/robot_char.tscn" id="1_tl7tt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36p10"]
+size = Vector2(647, 20)
 
 [node name="Sidescroller" type="Node2D"]
 
@@ -6,3 +11,21 @@
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(15.96, 8.92)
+color = Color(0.431373, 1, 1, 1)
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 318)
+scale = Vector2(1, 0.0400001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(316, 336)
+shape = SubResource("RectangleShape2D_36p10")
+
+[node name="ColorRect2" type="ColorRect" parent="Area2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(15.96, 8.92)
+color = Color(0.699307, 0.996131, 0.534134, 1)
+
+[node name="RobotChar" parent="." instance=ExtResource("1_tl7tt")]
+position = Vector2(103, 193)
