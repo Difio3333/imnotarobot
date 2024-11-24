@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ddfcjdq2ntim6"]
 
 [ext_resource type="Texture2D" uid="uid://bi1dwcouh2onm" path="res://assets/spritesheet_robot_walk_00.png" id="1_1mqc5"]
-[ext_resource type="Script" path="res://scenes/robot_char.gd" id="1_bitfw"]
+[ext_resource type="Script" path="res://scenes/robot_char_2.gd" id="1_toy5g"]
 
 [sub_resource type="Animation" id="Animation_1fjxt"]
 length = 0.001
@@ -68,7 +68,7 @@ size = Vector2(15, 32.5)
 height = 40.0
 
 [node name="RobotChar" type="CharacterBody2D"]
-script = ExtResource("1_bitfw")
+script = ExtResource("1_toy5g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_1mqc5")
