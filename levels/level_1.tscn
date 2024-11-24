@@ -17,23 +17,20 @@ offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0.615686, 0.694118, 0.662745, 1)
 
-[node name="WindowLong00" type="Sprite2D" parent="."]
-position = Vector2(341, 197)
-texture = ExtResource("2_lgqmq")
-
 [node name="Robot" parent="." instance=ExtResource("2_yp1lt")]
 visible = false
 position = Vector2(332, 187)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 278.0
-offset_top = 186.0
-offset_right = 398.0
-offset_bottom = 209.0
+[node name="ReviewingDataLabel" type="Label" parent="."]
+visible = false
+offset_left = 299.0
+offset_top = 208.0
+offset_right = 419.0
+offset_bottom = 231.0
 theme_override_colors/font_color = Color(0.156863, 0.172549, 0.207843, 1)
 theme_override_fonts/font = ExtResource("4_q5h4i")
 theme_override_font_sizes/font_size = 13
-text = "I'm not a robot."
+text = "Reviewing data..."
 
 [node name="CheckButton" type="Node" parent="."]
 
@@ -60,22 +57,35 @@ offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="WindowLong00" type="Sprite2D" parent="CheckButton"]
+position = Vector2(341, 197)
+texture = ExtResource("2_lgqmq")
+
+[node name="Label" type="Label" parent="CheckButton"]
+offset_left = 278.0
+offset_top = 186.0
+offset_right = 398.0
+offset_bottom = 209.0
+theme_override_colors/font_color = Color(0.156863, 0.172549, 0.207843, 1)
+theme_override_fonts/font = ExtResource("4_q5h4i")
+theme_override_font_sizes/font_size = 13
+text = "I'm not a robot."
+
 [node name="ButtonCheck00Idle" type="Sprite2D" parent="CheckButton"]
 position = Vector2(259, 195.5)
 texture = ExtResource("3_wcto7")
 
+[node name="GraphicCaptcha00" type="Sprite2D" parent="CheckButton"]
+position = Vector2(411, 195)
+texture = ExtResource("8_qxli5")
+
 [node name="ButtonCheck00Pressed" type="Sprite2D" parent="CheckButton"]
-visible = false
 position = Vector2(259, 195.5)
 texture = ExtResource("5_2y36u")
 
 [node name="Check" parent="CheckButton" instance=ExtResource("3_wsykj")]
 visible = false
 position = Vector2(259, 196)
-
-[node name="GraphicCaptcha00" type="Sprite2D" parent="."]
-position = Vector2(411, 195)
-texture = ExtResource("8_qxli5")
 
 [connection signal="button_down" from="CheckButton/Control/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="CheckButton/Control/Button" to="." method="_on_button_button_up"]
