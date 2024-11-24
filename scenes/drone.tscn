@@ -1,18 +1,61 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfo0m1xkeus7p"]
+[gd_scene load_steps=7 format=3 uid="uid://va3x4oi2eitm"]
 
 [ext_resource type="Script" path="res://scenes/drone.gd" id="1_yvblt"]
-[ext_resource type="Texture2D" uid="uid://c5n50mwnhsfln" path="res://assets/FotoFrido.jpg" id="2_i0ico"]
+[ext_resource type="Texture2D" uid="uid://c68acm4i4yc8a" path="res://assets/spritesheet_drone_fly_00.png" id="2_4xvw5"]
+
+[sub_resource type="Animation" id="Animation_318cj"]
+resource_name = "fly"
+length = 0.7
+loop_mode = 1
+step = 0.07
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.14, 0.21, 0.28, 0.35, 0.42, 0.49, 0.56, 0.63),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_h4mbr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3kmp"]
+_data = {
+"RESET": SubResource("Animation_h4mbr"),
+"fly": SubResource("Animation_318cj")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6qti1"]
+radius = 2.42372
 
 [node name="Drone" type="Area2D" groups=["Enemy"]]
 script = ExtResource("1_yvblt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_i0ico")
+texture = ExtResource("2_4xvw5")
+hframes = 10
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_o3kmp")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(5.84, 5.6)

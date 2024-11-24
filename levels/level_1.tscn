@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://bo44bx8x16iqo"]
+[gd_scene load_steps=11 format=3 uid="uid://bo44bx8x16iqo"]
 
 [ext_resource type="Script" path="res://scripts/level_1_script.gd" id="1_er66a"]
 [ext_resource type="Texture2D" uid="uid://c6lyseelj4xr5" path="res://assets/window_long_00.png" id="2_lgqmq"]
 [ext_resource type="PackedScene" uid="uid://drxtb1ddvnw7y" path="res://scenes/robot.tscn" id="2_yp1lt"]
+[ext_resource type="Script" path="res://scenes/robot.gd" id="3_5gchu"]
 [ext_resource type="Texture2D" uid="uid://cyeu7g64ti5be" path="res://assets/button_check_00_idle.png" id="3_wcto7"]
 [ext_resource type="PackedScene" uid="uid://cphxotdp3f8gy" path="res://scenes/check.tscn" id="3_wsykj"]
 [ext_resource type="FontFile" uid="uid://c11gqv8lqvvn1" path="res://assets/CWEBL.TTF" id="4_q5h4i"]
 [ext_resource type="Texture2D" uid="uid://bcguane8bsu8i" path="res://assets/button_check_00_pressed.png" id="5_2y36u"]
 [ext_resource type="Texture2D" uid="uid://gp3jeel0qsbh" path="res://assets/graphic_captcha_00.png" id="8_qxli5"]
+[ext_resource type="Script" path="res://scenes/check.gd" id="10_onnuj"]
 
 [node name="Level1" type="Node2D" groups=["Level"]]
 script = ExtResource("1_er66a")
@@ -20,6 +22,7 @@ color = Color(0.615686, 0.694118, 0.662745, 1)
 [node name="Robot" parent="." instance=ExtResource("2_yp1lt")]
 visible = false
 position = Vector2(321, 170)
+script = ExtResource("3_5gchu")
 
 [node name="ReviewingDataLabel" type="Label" parent="."]
 visible = false
@@ -88,6 +91,7 @@ texture = ExtResource("5_2y36u")
 [node name="Check" parent="CheckButton" instance=ExtResource("3_wsykj")]
 visible = false
 position = Vector2(239, 176)
+script = ExtResource("10_onnuj")
 
 [connection signal="button_down" from="CheckButton/Control/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="CheckButton/Control/Button" to="." method="_on_button_button_up"]
