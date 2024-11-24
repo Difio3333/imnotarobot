@@ -1,14 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5idxyjn2jq01"]
+[gd_scene load_steps=3 format=3 uid="uid://b5idxyjn2jq01"]
 
 [ext_resource type="PackedScene" uid="uid://dloiy8gta264g" path="res://scenes/captcha_text_in.tscn" id="1_rhgui"]
+[ext_resource type="Script" path="res://scripts/level_2_script.gd" id="1_y0npd"]
 
 [node name="Level2" type="Node2D" groups=["Level"]]
+script = ExtResource("1_y0npd")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 49.0
+offset_top = 33.0
+offset_right = 89.0
+offset_bottom = 73.0
 
 [node name="CaptchaTextIn" parent="Control" instance=ExtResource("1_rhgui")]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 127.0
+offset_top = 73.0
+offset_right = 127.0
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "fvfvfd"
+
+[node name="TempLabel" type="Label" parent="."]
+offset_left = 238.0
+offset_top = 109.0
+offset_right = 310.0
+offset_bottom = 126.0
+text = "Correct Text"
