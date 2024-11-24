@@ -1,15 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5idxyjn2jq01"]
+[gd_scene load_steps=6 format=3 uid="uid://b5idxyjn2jq01"]
 
 [ext_resource type="PackedScene" uid="uid://dloiy8gta264g" path="res://scenes/captcha_text_in.tscn" id="1_rhgui"]
 [ext_resource type="Script" path="res://scripts/level_2_script.gd" id="1_y0npd"]
+[ext_resource type="Texture2D" uid="uid://cey0jgiyk2k1r" path="res://assets/window_big_00.png" id="2_f63ej"]
+[ext_resource type="Texture2D" uid="uid://cw1barv8avf37" path="res://assets/button_normal_00_idle.png" id="4_4bwke"]
+[ext_resource type="Texture2D" uid="uid://cplp45frcgf2i" path="res://assets/typetextabove_00.png" id="5_vs030"]
 
 [node name="Level2" type="Node2D" groups=["Level"]]
 script = ExtResource("1_y0npd")
+check_text = "24+5="
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0.615686, 0.694118, 0.662745, 1)
+
+[node name="WindowBig00" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("2_f63ej")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -21,24 +29,24 @@ offset_bottom = 142.0
 
 [node name="CaptchaTextIn2" parent="Control" instance=ExtResource("1_rhgui")]
 layout_mode = 0
-offset_left = -24.0
-offset_top = -3.0
-offset_right = 70.0
-offset_bottom = 38.0
+offset_left = 103.0
+offset_top = 114.0
+offset_right = 209.0
+offset_bottom = 142.0
 
-[node name="TempLabel" type="Label" parent="."]
-offset_left = 238.0
-offset_top = 109.0
-offset_right = 310.0
-offset_bottom = 126.0
-size_flags_horizontal = 0
-text = "Correct Text"
+[node name="ButtonNormal00Idle" type="Sprite2D" parent="."]
+position = Vector2(317, 263)
+texture = ExtResource("4_4bwke")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 171.0
-offset_top = 163.0
-offset_right = 179.0
-offset_bottom = 171.0
+offset_left = 286.0
+offset_top = 253.0
+offset_right = 310.0
+offset_bottom = 262.0
 scale = Vector2(2.56, 1.8589)
+
+[node name="Typetextabove00" type="Sprite2D" parent="."]
+position = Vector2(320, 131)
+texture = ExtResource("5_vs030")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
