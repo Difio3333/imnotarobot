@@ -1,10 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://b5idxyjn2jq01"]
 
-[ext_resource type="Texture2D" uid="uid://c5n50mwnhsfln" path="res://assets/FotoFrido.jpg" id="2_aqr84"]
+[ext_resource type="PackedScene" uid="uid://dloiy8gta264g" path="res://scenes/captcha_text_in.tscn" id="1_rhgui"]
 
 [node name="Level2" type="Node2D" groups=["Level"]]
 
-[node name="FotoFrido" type="Sprite2D" parent="."]
-position = Vector2(538, 308)
-scale = Vector2(0.6525, 0.66875)
-texture = ExtResource("2_aqr84")
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CaptchaTextIn" parent="Control" instance=ExtResource("1_rhgui")]
+layout_mode = 0
