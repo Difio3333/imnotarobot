@@ -18,6 +18,14 @@ func _physics_process(delta: float) -> void:
 		anim_player.play("jump")
 		velocity.y = JUMP_VELOCITY
 	
-	
 
 	move_and_slide()
+
+
+
+func _on_hit_box_area_entered(area: Area2D) -> void:
+	print(area)
+	if area.is_in_group("Drone"):
+		Messenger.emit_signal("LEVEL_WIN")
+	elif area.is_in_group("Clouds"):
+		print("I collided with the clouds!!!!")

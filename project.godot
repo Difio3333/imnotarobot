@@ -23,6 +23,7 @@ Messenger="*res://globals/Messenger.gd"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/resizable=false
 mouse_cursor/custom_image="res://assets/cursor_hand_00_idle.png"
 mouse_cursor/custom_image_hotspot=Vector2(5, 2)
 

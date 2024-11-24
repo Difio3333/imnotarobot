@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciyd8hxq0x2me"]
+[gd_scene load_steps=4 format=3 uid="uid://bgjm51ev3uxf1"]
 
 [ext_resource type="Texture2D" uid="uid://ckafeq1jf6ehn" path="res://assets/graphic_sidescroller_clouds_00.png" id="1_vdj2o"]
+[ext_resource type="Script" path="res://scenes/clouds.gd" id="2_lpjyl"]
 
-[node name="Clouds" type="Sprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j38eq"]
+size = Vector2(5, 28)
+
+[node name="Clouds" type="Area2D" groups=["Clouds"]]
+script = ExtResource("2_lpjyl")
+cloud_speed = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_vdj2o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-316, -78)
+shape = SubResource("RectangleShape2D_j38eq")
