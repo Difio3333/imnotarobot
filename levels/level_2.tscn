@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5idxyjn2jq01"]
+[gd_scene load_steps=7 format=3 uid="uid://b5idxyjn2jq01"]
 
 [ext_resource type="PackedScene" uid="uid://dloiy8gta264g" path="res://scenes/captcha_text_in.tscn" id="1_rhgui"]
 [ext_resource type="Script" path="res://scripts/level_2_script.gd" id="1_y0npd"]
 [ext_resource type="Texture2D" uid="uid://cey0jgiyk2k1r" path="res://assets/window_big_00.png" id="2_f63ej"]
+[ext_resource type="FontFile" uid="uid://c11gqv8lqvvn1" path="res://assets/CWEBL.TTF" id="3_spsrk"]
 [ext_resource type="Texture2D" uid="uid://cw1barv8avf37" path="res://assets/button_normal_00_idle.png" id="4_4bwke"]
 [ext_resource type="Texture2D" uid="uid://cplp45frcgf2i" path="res://assets/typetextabove_00.png" id="5_vs030"]
 
@@ -18,6 +19,17 @@ color = Color(0.615686, 0.694118, 0.662745, 1)
 [node name="WindowBig00" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
 texture = ExtResource("2_f63ej")
+
+[node name="Label" type="Label" parent="WindowBig00"]
+offset_left = -63.0
+offset_top = 16.0
+offset_right = 57.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.156863, 0.172549, 0.207843, 1)
+theme_override_fonts/font = ExtResource("3_spsrk")
+theme_override_font_sizes/font_size = 13
+text = "Type the text above"
+horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -46,7 +58,7 @@ offset_bottom = 262.0
 scale = Vector2(2.56, 1.8589)
 
 [node name="Typetextabove00" type="Sprite2D" parent="."]
-position = Vector2(320, 131)
+position = Vector2(320, 133)
 texture = ExtResource("5_vs030")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
