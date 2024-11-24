@@ -8,7 +8,7 @@ func _ready():
 	Messenger.connect("LEVEL_WIN",next_level)
 	Messenger.connect("LEVEL_LOSE",last_level)
 	load_levels()
-	next_level()
+	load_current_level()
 	
 func load_levels():
 	var folder_path = "res://levels/"
@@ -36,8 +36,8 @@ func load_levels():
 		file_name = dir.get_next()
 		
 	dir.list_dir_end()
-	
-func next_level():
+
+func load_current_level():
 	for child in get_children():
 		if not child.is_in_group("Level"):
 			continue
@@ -45,14 +45,9 @@ func next_level():
 	
 	var current_level = loaded_levels[current_level_index].instantiate()
 	call_deferred("add_child",current_level)
+
+func next_level():
 	current_level_index += 1
 
 func last_level():
-	for child in get_children():
-		if not child.is_in_group("Level"):
-			continue
-		child.queue_free()
-	
-	var current_level = loaded_levels[current_level_index].instantiate()
-	call_deferred("add_child",current_level)
 	current_level_index -= 1

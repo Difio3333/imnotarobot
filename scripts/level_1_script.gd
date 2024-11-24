@@ -1,5 +1,7 @@
 extends Node2D
 
+var level_id: int = 1
+
 @onready var robot: Sprite2D = $Robot
 @onready var check: Sprite2D = $CheckButton/Check
 @onready var button_check_00_pressed: Sprite2D = $CheckButton/ButtonCheck00Pressed
