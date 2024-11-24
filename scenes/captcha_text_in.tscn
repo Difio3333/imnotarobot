@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://dloiy8gta264g"]
 
 [node name="CaptchaTextIn" type="TextEdit"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 94.0
+offset_bottom = 41.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.843184, 0.843184, 0.843184, 1)
+theme_override_colors/font_color = Color(0.156863, 0.172549, 0.207843, 1)
+theme_override_font_sizes/font_size = 13
+placeholder_text = "Type here"
