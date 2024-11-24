@@ -10,7 +10,7 @@
 
 [node name="Level2" type="Node2D" groups=["Level"]]
 script = ExtResource("1_y0npd")
-check_text = Array[String](["Hello", "fefewf", "dasdsad", "dasd"])
+check_text = Array[String](["24 + 5 ≈", "24+5≈", "24 + 5 =", "24+5="])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 640.0
@@ -41,11 +41,7 @@ offset_right = 201.0
 offset_bottom = 142.0
 
 [node name="CaptchaTextIn2" parent="Control" instance=ExtResource("1_rhgui")]
-layout_mode = 0
-offset_left = 103.0
-offset_top = 114.0
-offset_right = 209.0
-offset_bottom = 142.0
+position = Vector2(118, 114)
 
 [node name="Typetextabove00" type="Sprite2D" parent="."]
 position = Vector2(320, 133)
