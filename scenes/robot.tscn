@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://drxtb1ddvnw7y"]
 
-[ext_resource type="Texture2D" uid="uid://du3e14bigsxpf" path="res://assets/inar_spritesheet_robot_sus_00.png" id="1_hgnue"]
+[ext_resource type="Texture2D" uid="uid://74ejbv84uyky" path="res://assets/spritesheet_robot_sus_00.png" id="1_2uuj0"]
 [ext_resource type="Script" path="res://scenes/robot.gd" id="2_rdw0y"]
 
 [sub_resource type="Animation" id="Animation_hd7da"]
@@ -42,7 +42,7 @@ _data = {
 }
 
 [node name="Robot" type="Sprite2D"]
-texture = ExtResource("1_hgnue")
+texture = ExtResource("1_2uuj0")
 hframes = 30
 script = ExtResource("2_rdw0y")
 
