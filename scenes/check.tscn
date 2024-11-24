@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dh5avbg5umttg"]
+[gd_scene load_steps=5 format=3 uid="uid://cphxotdp3f8gy"]
 
 [ext_resource type="Texture2D" uid="uid://uskth5uoaqha" path="res://assets/spritesheet_check_fill_00.png" id="1_ra6tv"]
 
@@ -40,7 +40,7 @@ _data = {
 "check_fill": SubResource("Animation_m2u77")
 }
 
-[node name="Sprite2D" type="Sprite2D"]
+[node name="Check" type="Sprite2D"]
 texture = ExtResource("1_ra6tv")
 hframes = 8
 

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bo44bx8x16iqo"]
+[gd_scene load_steps=5 format=3 uid="uid://bo44bx8x16iqo"]
 
 [ext_resource type="Script" path="res://scripts/level_1_script.gd" id="1_er66a"]
 [ext_resource type="PackedScene" uid="uid://drxtb1ddvnw7y" path="res://scenes/robot.tscn" id="2_yp1lt"]
+[ext_resource type="Texture2D" uid="uid://cyeu7g64ti5be" path="res://assets/button_check_00_idle.png" id="3_wcto7"]
+[ext_resource type="PackedScene" uid="uid://cphxotdp3f8gy" path="res://scenes/check.tscn" id="3_wsykj"]
 
 [node name="Level1" type="Node2D" groups=["Level"]]
 script = ExtResource("1_er66a")
@@ -15,5 +17,12 @@ text = "Next Level"
 
 [node name="Robot" parent="." instance=ExtResource("2_yp1lt")]
 position = Vector2(346, 127)
+
+[node name="ButtonCheck00Idle" type="Sprite2D" parent="."]
+position = Vector2(310, 148)
+texture = ExtResource("3_wcto7")
+
+[node name="Check" parent="." instance=ExtResource("3_wsykj")]
+position = Vector2(314, 150)
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
