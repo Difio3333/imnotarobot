@@ -39,10 +39,10 @@ func load_levels():
 
 func load_current_level():
 	for child in get_children():
-		if not child.is_in_group("Level"):
-			continue
-		child.queue_free()
-	
+		if child.is_in_group("Level"):
+			child.queue_free()
+		elif child.is_in_group("Ground"):
+			child.queue_free()
 	var current_level = loaded_levels[current_level_index].instantiate()
 	call_deferred("add_child",current_level)
 

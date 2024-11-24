@@ -15,7 +15,6 @@ func _on_button_button_down() -> void:
 	button_check_00_idle.visible = false
 	button_check_00_pressed.visible = true
 
-
 func handle_animations(anim_name):
 	if anim_name == "robot_sus":
 		Messenger.emit_signal("LEVEL_WIN")
