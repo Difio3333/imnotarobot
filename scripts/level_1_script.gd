@@ -1,15 +1,11 @@
 extends Node2D
 
-var level_id: int = 1
-
 @onready var robot: Sprite2D = $Robot
 @onready var check: Sprite2D = $CheckButton/Check
 @onready var button_check_00_pressed: Sprite2D = $CheckButton/ButtonCheck00Pressed
 @onready var button_check_00_idle: Sprite2D = $CheckButton/ButtonCheck00Idle
 @onready var check_button: Node = $CheckButton
 @onready var reviewing_data_label: Label = $ReviewingDataLabel
-
-
 
 func _ready() -> void:
 	Messenger.connect("ANIMATION_FINISHED",handle_animations)

@@ -52,3 +52,7 @@ func next_level():
 func last_level():
 	current_level_index -= 1
 	load_current_level()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Exit"):
+		get_tree().quit()

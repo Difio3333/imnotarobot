@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5idxyjn2jq01"]
+[gd_scene load_steps=8 format=3 uid="uid://b5idxyjn2jq01"]
 
 [ext_resource type="PackedScene" uid="uid://dloiy8gta264g" path="res://scenes/captcha_text_in.tscn" id="1_rhgui"]
 [ext_resource type="Script" path="res://scripts/level_2_script.gd" id="1_y0npd"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://c11gqv8lqvvn1" path="res://assets/CWEBL.TTF" id="3_spsrk"]
 [ext_resource type="Texture2D" uid="uid://cw1barv8avf37" path="res://assets/button_normal_00_idle.png" id="4_4bwke"]
 [ext_resource type="Texture2D" uid="uid://cplp45frcgf2i" path="res://assets/typetextabove_00.png" id="5_vs030"]
+[ext_resource type="Texture2D" uid="uid://cm68nunpbt655" path="res://assets/button_normal_00_pressed.png" id="7_voihg"]
 
 [node name="Level2" type="Node2D" groups=["Level"]]
 script = ExtResource("1_y0npd")
@@ -46,19 +47,36 @@ offset_top = 114.0
 offset_right = 209.0
 offset_bottom = 142.0
 
-[node name="ButtonNormal00Idle" type="Sprite2D" parent="."]
-position = Vector2(317, 263)
-texture = ExtResource("4_4bwke")
-
-[node name="Button" type="Button" parent="."]
-offset_left = 286.0
-offset_top = 253.0
-offset_right = 310.0
-offset_bottom = 262.0
-scale = Vector2(2.56, 1.8589)
-
 [node name="Typetextabove00" type="Sprite2D" parent="."]
 position = Vector2(320, 133)
 texture = ExtResource("5_vs030")
 
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 275.0
+offset_top = 251.0
+offset_right = 299.0
+offset_bottom = 260.0
+rotation = -0.00165871
+scale = Vector2(3.54516, 2.64881)
+
+[node name="ButtonNormal00Idle" type="Sprite2D" parent="."]
+position = Vector2(317, 263)
+texture = ExtResource("4_4bwke")
+
+[node name="ButtonNormal00Pressed" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(317, 263)
+texture = ExtResource("7_voihg")
+
+[node name="Verify" type="Label" parent="."]
+offset_left = 300.0
+offset_top = 253.0
+offset_right = 340.0
+offset_bottom = 270.0
+theme_override_font_sizes/font_size = 13
+text = "Verify"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
