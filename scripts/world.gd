@@ -6,6 +6,7 @@ var current_level_index: int = 0
 func _ready():
 	
 	Messenger.connect("LEVEL_WIN",next_level)
+	Messenger.connect("LEVEL_LOSE",last_level)
 	load_levels()
 	next_level()
 	
@@ -45,3 +46,13 @@ func next_level():
 	var current_level = loaded_levels[current_level_index].instantiate()
 	call_deferred("add_child",current_level)
 	current_level_index += 1
+
+func last_level():
+	for child in get_children():
+		if not child.is_in_group("Level"):
+			continue
+		child.queue_free()
+	
+	var current_level = loaded_levels[current_level_index].instantiate()
+	call_deferred("add_child",current_level)
+	current_level_index -= 1
