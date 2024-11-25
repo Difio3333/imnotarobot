@@ -15,7 +15,7 @@ func _ready() -> void:
 func _on_timer_timeout() -> void:
 	
 	var new_drone = drone.instantiate()
-	new_drone.position.y = randi_range(100,300)
+	new_drone.position.y = randi_range(100,250)
 	new_drone.position.x = get_viewport_rect().size.x + 50
 	get_tree().get_root().add_child(new_drone)
 
@@ -29,13 +29,13 @@ func spawn_ground():
 	new_ground.position.y = first_ground.position.y
 	new_ground.position.x = get_viewport_rect().size.x + 300
 	get_tree().get_root().add_child.call_deferred(new_ground)
-
+	GVariables.global_speed += 0.5
+	
 func spawn_clouds():
 	var new_clouds = clouds.instantiate()
 	new_clouds.position.y = first_clouds.position.y
 	new_clouds.position.x = get_viewport_rect().size.x + 320
 	get_tree().get_root().add_child.call_deferred(new_clouds)
-
 
 func _on_cloud_spawner_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Clouds"):

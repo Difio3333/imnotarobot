@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsd3vpilgeiy7"]
+[gd_scene load_steps=3 format=3 uid="uid://bsd3vpilgeiy7"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_8t6g1"]
+[ext_resource type="AudioStream" uid="uid://byp8b8obxx217" path="res://assets/BeepBox-Song(1).wav" id="2_mgveu"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_8t6g1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mgveu")

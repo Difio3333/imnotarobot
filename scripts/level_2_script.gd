@@ -11,10 +11,6 @@ extends Node2D
 func _ready() -> void:
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func _on_button_button_down() -> void:
 	button_normal_00_idle.visible = false
 	button_normal_00_pressed.visible = true

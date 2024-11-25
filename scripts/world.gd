@@ -1,14 +1,18 @@
 extends Node2D
 
 var loaded_levels: Array[PackedScene]
+var loading_screen = preload("res://scenes/loading.tscn")
 var current_level_index: int = 0
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready():
 	
-	Messenger.connect("LEVEL_WIN",next_level)
+	Messenger.connect("LEVEL_WIN",display_loading_screen)
+	Messenger.connect("LOADING_FINISHED",next_level)
 	Messenger.connect("LEVEL_LOSE",last_level)
 	load_levels()
 	load_current_level()
+	audio_stream_player.play()
 	
 func load_levels():
 	var folder_path = "res://levels/"
@@ -37,13 +41,13 @@ func load_levels():
 		
 	dir.list_dir_end()
 
-func load_current_level():
-	for child in get_children():
-		if child.is_in_group("Level"):
-			child.queue_free()
-		elif child.is_in_group("Ground"):
-			child.queue_free()
-			
+func display_loading_screen():
+	clear_level_assets()
+	var current_level = loading_screen.instantiate()
+	call_deferred("add_child",current_level)
+	
+func load_current_level():		
+	clear_level_assets()
 	var current_level = loaded_levels[current_level_index].instantiate()
 	call_deferred("add_child",current_level)
 
@@ -53,6 +57,12 @@ func next_level():
 func last_level():
 	current_level_index -= 1
 	load_current_level()
+
+func clear_level_assets():
+	for child in get_children():
+		if child.is_in_group("Level"):
+			child.call_deferred("queue_free")
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Exit"):

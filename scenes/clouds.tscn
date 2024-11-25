@@ -8,7 +8,6 @@ size = Vector2(5, 28)
 
 [node name="Clouds" type="Area2D" groups=["Clouds"]]
 script = ExtResource("2_lpjyl")
-cloud_speed = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_vdj2o")

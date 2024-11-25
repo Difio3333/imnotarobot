@@ -11,7 +11,7 @@ size = Vector2(131, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67tfr"]
 size = Vector2(20, 64)
 
-[node name="Sidescroller" type="Node2D" groups=["Level"]]
+[node name="Level3" type="Node2D" groups=["Level"]]
 script = ExtResource("1_tdv6b")
 
 [node name="ColorRect" type="ColorRect" parent="."]

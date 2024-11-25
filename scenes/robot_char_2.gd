@@ -7,7 +7,7 @@ func _ready():
 	anim_player.play("walk")
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
@@ -22,8 +22,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
-	print(area)
 	if area.is_in_group("Drone"):
 		Messenger.emit_signal("LEVEL_WIN")
-	elif area.is_in_group("Clouds"):
-		print("I collided with the clouds!!!!")
