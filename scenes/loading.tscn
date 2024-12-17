@@ -5,6 +5,21 @@
 [ext_resource type="FontFile" uid="uid://c11gqv8lqvvn1" path="res://assets/CWEBL.TTF" id="2_yfgaf"]
 [ext_resource type="Script" path="res://scenes/reviewing_data_label.gd" id="4_550xk"]
 
+[sub_resource type="Animation" id="Animation_3q21h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Reviewing data..."]
+}
+
 [sub_resource type="Animation" id="Animation_8mxty"]
 resource_name = "dotdotdot"
 length = 1.2
@@ -21,21 +36,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": ["Reviewing data", "Reviewing data.", "Reviewing data..", "Reviewing data..."]
-}
-
-[sub_resource type="Animation" id="Animation_3q21h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["Reviewing data..."]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_623ru"]
