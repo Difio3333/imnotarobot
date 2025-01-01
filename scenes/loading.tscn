@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://b40pp8tinkgif"]
 
-[ext_resource type="Script" path="res://scenes/loading.gd" id="1_7wh8c"]
+[ext_resource type="Script" path="res://scripts/loading.gd" id="1_7wh8c"]
 [ext_resource type="PackedScene" uid="uid://drxtb1ddvnw7y" path="res://scenes/robot.tscn" id="1_i0h6k"]
 [ext_resource type="FontFile" uid="uid://c11gqv8lqvvn1" path="res://assets/CWEBL.TTF" id="2_yfgaf"]
-[ext_resource type="Script" path="res://scenes/reviewing_data_label.gd" id="4_550xk"]
+[ext_resource type="Script" path="res://scripts/reviewing_data_label.gd" id="4_550xk"]
 
 [sub_resource type="Animation" id="Animation_3q21h"]
 length = 0.001

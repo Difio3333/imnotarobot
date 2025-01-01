@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ddfcjdq2ntim6"]
 
 [ext_resource type="Texture2D" uid="uid://bi1dwcouh2onm" path="res://assets/spritesheet_robot_walk_00.png" id="1_1mqc5"]
-[ext_resource type="Script" path="res://scenes/robot_char_2.gd" id="1_toy5g"]
+[ext_resource type="Script" path="res://scripts/robot_char_2.gd" id="1_toy5g"]
 
 [sub_resource type="Animation" id="Animation_1fjxt"]
 length = 0.001

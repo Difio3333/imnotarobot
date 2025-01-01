@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckptmsdvjd55n"]
 
 [ext_resource type="Texture2D" uid="uid://bdmgryxohi242" path="res://assets/graphic_sidescroller_ground_00.png" id="1_hw32l"]
-[ext_resource type="Script" path="res://scenes/ground.gd" id="2_vlxhq"]
+[ext_resource type="Script" path="res://scripts/ground.gd" id="2_vlxhq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i85cm"]
 size = Vector2(2.5, 29)
